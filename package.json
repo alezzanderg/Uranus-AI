@@ -1,0 +1,83 @@
+{
+  "name": "uranus-ai",
+  "version": "1.1.0",
+  "description": "AI-Enhanced Code Editor based on Code-OSS with native AI integration",
+  "main": "index.js",
+  "scripts": {
+    "install-all": "npm run install-backend && npm run install-frontend",
+    "install-backend": "cd ai-backend && pip install -r requirements.txt",
+    "install-frontend": "cd vscode && npm install",
+    "start": "npm run start-backend & npm run start-frontend",
+    "start-backend": "cd ai-backend && python -m app.main",
+    "start-frontend": "cd vscode && npm run watch",
+    "build": "npm run build-frontend",
+    "build-frontend": "cd vscode && npm run compile-build",
+    "test": "npm run test-backend && npm run test-frontend",
+    "test-backend": "cd ai-backend && python -m pytest",
+    "test-frontend": "cd vscode && npm test",
+    "lint": "npm run lint-backend && npm run lint-frontend",
+    "lint-backend": "cd ai-backend && flake8 app/",
+    "lint-frontend": "cd vscode && npm run lint",
+    "clean": "npm run clean-backend && npm run clean-frontend",
+    "clean-backend": "cd ai-backend && rm -rf __pycache__ .pytest_cache",
+    "clean-frontend": "cd vscode && rm -rf out dist",
+    "dev": "concurrently \"npm run start-backend\" \"npm run start-frontend\"",
+    "setup": "npm run install-all && npm run setup-env",
+    "setup-env": "cd ai-backend && cp .env.example .env",
+    "health": "curl http://localhost:8000/health || echo 'Backend not running'",
+    "docs": "cd ai-backend && python -c \"import webbrowser; webbrowser.open('http://localhost:8000/docs')\"",
+    "models": "curl http://localhost:8000/api/v1/models/available || echo 'Backend not running'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alezzanderg/Uranus-AI.git"
+  },
+  "keywords": [
+    "ai",
+    "editor",
+    "vscode",
+    "code-oss",
+    "artificial-intelligence",
+    "typescript",
+    "python",
+    "fastapi",
+    "cursor-alternative",
+    "multi-model",
+    "openai",
+    "claude",
+    "gemini",
+    "grok",
+    "deepseek"
+  ],
+  "author": "Uranus-AI Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alezzanderg/Uranus-AI/issues"
+  },
+  "homepage": "https://github.com/alezzanderg/Uranus-AI#readme",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0",
+    "python": ">=3.11.0"
+  },
+  "os": [
+    "win32",
+    "darwin",
+    "linux"
+  ],
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "files": [
+    "vscode/",
+    "ai-backend/",
+    "*.md",
+    "*.sh",
+    "*.bat"
+  ]
+}
+
