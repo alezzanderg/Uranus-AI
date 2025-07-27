@@ -1,19 +1,28 @@
 # 🪐 Uranus-AI Editor
 
-Un editor de código moderno basado en Code-OSS con capacidades nativas de inteligencia artificial integradas directamente en el código fuente, sin usar el sistema de extensiones de VS Code.
+Un editor de código moderno basado en Code-OSS con capacidades nativas de inteligencia artificial integradas directamente en el código fuente, **ahora con soporte para múltiples modelos de IA**.
 
 ![Uranus-AI Logo](https://img.shields.io/badge/Uranus--AI-Editor-blue?style=for-the-badge&logo=visual-studio-code)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 ![Python](https://img.shields.io/badge/Python-3.11+-blue?style=for-the-badge&logo=python)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue?style=for-the-badge&logo=typescript)
 ![FastAPI](https://img.shields.io/badge/FastAPI-Latest-green?style=for-the-badge&logo=fastapi)
+![Version](https://img.shields.io/badge/Version-1.1.0-orange?style=for-the-badge)
 
 ## 🚀 Características Principales
 
-### 🤖 AI Assistant Nativo
-- **Integración Directa**: El AI Assistant está integrado directamente en el código fuente de Code-OSS, no como una extensión
+### 🤖 Multi-Model AI Support (NUEVO v1.1.0)
+- **15+ Modelos Soportados**: OpenAI, Claude, Gemini, Grok, DeepSeek, Mistral, Cohere, Ollama
+- **Selección Inteligente**: El sistema recomienda el mejor modelo para cada tarea
+- **Fallback Automático**: Si un modelo falla, automáticamente usa alternativas
+- **Comparación en Tiempo Real**: Compara respuestas de múltiples modelos
+- **Optimización de Costos**: Elige automáticamente modelos cost-effective
+- **Modelos Locales**: Soporte completo para Ollama (Llama 2, Code Llama)
+
+### 🧠 AI Assistant Nativo
+- **Integración Directa**: El AI Assistant está integrado directamente en el código fuente de Code-OSS
 - **Secondary Sidebar**: Aparece como un panel persistente en la barra lateral derecha
-- **Chat Inteligente**: Conversación contextual con IA sobre tu código
+- **Chat Inteligente**: Conversación contextual con múltiples modelos de IA
 - **Análisis de Código**: Análisis estático y sugerencias inteligentes powered by AI
 
 ### 💬 Funcionalidades de Chat
